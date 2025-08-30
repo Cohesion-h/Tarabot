@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarabot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* 
+        This is a basic setup. For a full project, you would use a tailwind.config.js
+        to define the design tokens from the blueprint.
+      */
+      html {
+        background-color: #000000;
+        color: #baccde; /* --color-secondary */
+      }
+    </style>
+    <script>
+      /*
+        tailwind.config.js would look like this:
+        module.exports = {
+          theme: {
+            extend: {
+              colors: {
+                background: '#000000',
+                primary: '#2762d4',
+                secondary: '#baccde',
+                'glass-bg': '#191919',
+                success: '#10b981',
+                warning: '#f59e0b',
+                error: '#ef4444',
+                disabled: '#6b7280',
+              },
+              fontFamily: {
+                display: ['"Share Tech Mono"', 'monospace'],
+                body: ['Poppins', 'sans-serif'],
+                'body-ar': ['Tajawal', 'sans-serif'],
+              },
+              fontSize: {
+                'hero': '72px',
+                'h1': '48px',
+                'h2': '36px',
+                'h3': '24px',
+                'body-lg': '18px',
+                'body-md': '16px',
+                'body-sm': '14px',
+                'caption': '12px',
+              },
+              spacing: {
+                '1': '4px',
+                '2': '8px',
+                '4': '16px',
+                '6': '24px',
+                '8': '32px',
+                '12': '48px',
+              }
+            }
+          }
+        }
+      */
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2"
+  }
+}
+</script>
+</head>
+<body class="font-body text-body-md leading-[1.5]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

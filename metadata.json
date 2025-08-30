@@ -1,0 +1,7 @@
+{
+  "name": "Tarabot",
+  "description": "Tarabot is Kuwait's premier AI-powered innovation ecosystem, designed to connect top creators and investors in a futuristic, premium, and sophisticated digital environment.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
