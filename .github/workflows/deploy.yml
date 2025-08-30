@@ -35,21 +35,25 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4. Build the project into a static site using Vite
+      # 4. NEW STEP: Create the .env file with the API key
+      - name: Create .env file
+        run: echo "VITE_GEMINI_API_KEY=${{ secrets.VITE_GEMINI_API_KEY }}" > .env
+
+      # 5. Build the project into a static site using Vite
       - name: Build project
         run: npm run build
 
-      # 5. Prepare the built site for GitHub Pages
+      # 6. Prepare the built site for GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 6. Upload the built site (from the 'dist' folder, which is Vite's default)
+      # 7. Upload the built site (from the 'dist' folder)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
-      # 7. Deploy the site to the live URL
+      # 8. Deploy the site to the live URL
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
