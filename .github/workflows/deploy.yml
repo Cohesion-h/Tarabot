@@ -1,0 +1,55 @@
+# Name of the workflow
+name: Build and Deploy Vite project to GitHub Pages
+
+# This controls when the workflow runs
+on:
+  # Run on pushes to the "main" branch
+  push:
+    branches: ["main"]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Set permissions for the workflow to allow deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define the jobs that will run
+jobs:
+  # This workflow has one job called "build-and-deploy"
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Get the code from your repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up the Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Install all the necessary packages for your project
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Build the project into a static site using Vite
+      - name: Build project
+        run: npm run build
+
+      # 5. Prepare the built site for GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 6. Upload the built site (from the 'dist' folder, which is Vite's default)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      # 7. Deploy the site to the live URL
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
