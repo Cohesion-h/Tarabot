@@ -1,6 +1,6 @@
 {
   "name": "Tarabot",
-  "description": "Tarabot is Kuwait's premier AI-powered innovation ecosystem, designed to connect top creators and investors in a futuristic, premium, and sophisticated digital environment.",
+  "description": "Tarabot is Kuwait's premier AI-powered innovation ecosystem, connecting verified creators and investors. Leverage the AI Super Agent to generate business plans with 'Project Spark', conduct deep research, and create marketing materials using voice or text commands. Build your reputation with a verifiable 'Digital Palm' portfolio, engage with the community on the networking feed, and discover opportunities in the talent and crowdfunding marketplace. All within a secure, sophisticated digital environment verified by Hawiyti.",
   "requestFramePermissions": [
     "microphone"
   ]

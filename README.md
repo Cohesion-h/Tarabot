@@ -1,33 +1,20 @@
-# Tarabot (ترابط) - Prototype
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Welcome to the official repository for the Tarabot frontend prototype. Tarabot is Kuwait's premier AI-powered innovation ecosystem where verified talent meets strategic capital.
+# Run and deploy your AI Studio app
 
-This repository contains the code for the interactive prototype, which has been deployed for demonstration purposes.
+This contains everything you need to run your app locally.
 
----
+View your app in AI Studio: https://ai.studio/apps/drive/1L6srJFFlLCd0ZCPzmUigWp-sm47JKHDg
 
-## 🚀 View the Live Prototype
+## Run Locally
 
-You can view and interact with the live prototype here:
+**Prerequisites:**  Node.js
 
-**https://cohesion-h.github.io/Tarabot/**
 
----
-
-## Core Mission & Vision
-
-**Tagline:** "We Architect Business's Breakthroughs"
-
-Tarabot is a sophisticated platform designed to connect creators, entrepreneurs, investors, and enterprises through intelligent matchmaking and cutting-edge technology. Our core mission is to architect a trusted digital nexus that accelerates the goals of Kuwait Vision 2035 by solving the critical market failure of inefficient connection between talent and capital.
-
-### Key Value Propositions
-
-*   **AI-Powered Matchmaking:** Intelligently connect creators with investors.
-*   **Verified Trust:** User profiles are verified through Kuwait's Hawiyti digital identity system.
-*   **Bilingual Excellence:** A seamless experience in both Arabic and English.
-*   **Enhanced Collaboration:** Smart room technology for high-tech meetings and presentations.
-*   **Comprehensive Services:** Consulting and support provided through Cohesion W.L.L.
-
----
-
-_This project was initially scaffolded using Google AI Studio and is currently in the prototype stage. The code and features are for demonstration and validation purposes only._
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
